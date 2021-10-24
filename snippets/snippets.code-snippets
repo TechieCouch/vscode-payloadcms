@@ -1,0 +1,387 @@
+{
+  "PayloadCMS Array Field": {
+    "prefix": "!pfa",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  type: \"array\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  minRows: ${3:0},",
+      "  maxRows: ${4:10},",
+      "  labels: {",
+      "    singular: \"${1/(.*)/${1:/capitalize}/}\",",
+      "    plural: \"${1/(.*)/${1:/capitalize}/}s\",",
+      "  },",
+      "  fields: [",
+      "    // required",
+      "   ${5}",
+      "  ],",
+      "},${6}"
+    ],
+    "description": "PayloadCMS Array Field"
+  },
+  "PayloadCMS Checkbox Field": {
+    "prefix": "!pfc",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  type: \"checkbox\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  defaultValue: false,",
+      "},${3}"
+    ],
+    "description": "PayloadCMS Checkbox Field"
+  },
+  "PayloadCMS Date Field": {
+    "prefix": "!pfd",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  type: \"date\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  defaultValue: '1988-11-05T8:00:00.000+05:00',",
+      "      admin: {",
+      "        date: {",
+      "          //Options: dayAndTime, timeOnly, dayOnly",
+      "          pickerAppearance: 'dayAndTime',",
+      "        }",
+      "      }",
+      "}${3}"
+    ],
+    "description": "PayloadCMS Date Field"
+  },
+  "PayloadCMS Email Field": {
+    "prefix": "!pfe",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  type: \"email\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  required: ${3:true},",
+      "},${4}"
+    ],
+    "description": "PayloadCMS Email Field"
+  },
+  "PayloadCMS Group Field": {
+    "prefix": "!pfg",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  type: \"group\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  fields: [ // required",
+      "    ${3}     ",
+      "  ],",
+      "},",
+      "${4}"
+    ],
+    "description": "PayloadCMS Group Field"
+  },
+  "PayloadCMS Number Field": {
+    "prefix": "!pfn",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  type: \"number\", // required",
+      "  required: ${3:false},",
+      "  admin: {",
+      "      step: ${4:1},",
+      "  }",
+      "},",
+      "${5}"
+    ],
+    "description": "PayloadCMS Number Field"
+  },
+  "PayloadCMS Point Field": {
+    "prefix": "!pfp",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  type: \"point\", // required",
+      "  required: ${3:false}",
+      "},",
+      "${4}"
+    ],
+    "description": "PayloadCMS Point Field"
+  },
+  "PayloadCMS Radio Group Field": {
+    "prefix": "!pfrg",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  type: 'radio', // required",
+      "  required: ${3:false},",
+      "      options: [ // required",
+      "        {",
+      "          label: '${4:itemLabel}',",
+      "          value: '${5:itemValue}',",
+      "        },",
+      "       {",
+      "          label: '${6:itemLabel}',",
+      "          value: '${7:itemValue}',",
+      "        },",
+      "      ],",
+      "      defaultValue: '${5:itemValue}',",
+      "      admin: {",
+      "        layout: '${8:horizontal}',",
+      "      }",
+      "},",
+      "${9}"
+    ],
+    "description": "PayloadCMS Radio Group Field"
+  },
+  "PayloadCMS Relationship - Has One - Field": {
+    "prefix": "!pfrho",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  type: 'relationship', // required",
+      "  relationTo:'${3:collectionName}', //required eg:users",
+      "  hasMany: ${4:false},",
+      "  required: ${5:false}",
+      "},",
+      "${6}"
+    ],
+    "description": "PayloadCMS Relationship - Has One Field"
+  },
+  "PayloadCMS Relationship - Has Many - Field": {
+    "prefix": "!pfrhm",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  type: 'relationship', // required",
+      "  relationTo:'${3:collectionName}', //required eg:users",
+      "  hasMany: ${4:true},",
+      "  required: ${5:false}",
+      "},",
+      "${6}"
+    ],
+    "description": "PayloadCMS Relationship - Has Many - Field"
+  },
+  "PayloadCMS Relationship - Has One Polymorphic -  Field": {
+    "prefix": "!pfrhop",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  type: 'relationship', // required",
+      "  relationTo:[  //required eg:users",
+      "    '${3:collectionName}',",
+      "    '${4:collectionName}',",
+      "  ], ",
+      "  hasMany: ${5:false},",
+      "  required: ${6:false},",
+      "},",
+      "${7}"
+    ],
+    "description": "PayloadCMS Relationship - Has One - Polymorphic Field. so known as dynamic references, in this configuration, the relationTo field is an array of Collection slugs that tells Payload which Collections are valid to reference."
+  },
+  "PayloadCMS Relationship - Has Many Polymorphic -  Field": {
+    "prefix": "!pfrhmp",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  type: 'relationship', // required",
+      "  relationTo:[  //required eg:users",
+      "    '${3:collectionName}',",
+      "    '${4:collectionName}',",
+      "  ], ",
+      "  hasMany: ${5:true},",
+      "  required: ${6:false},",
+      "},",
+      "${7}"
+    ],
+    "description": "PayloadCMS Relationship - Has Many Polymorphic - Field. so known as dynamic references, in this configuration, the relationTo field is an array of Collection slugs that tells Payload which Collections are valid to reference."
+  },
+  "PayloadCMS Row - Field": {
+    "prefix": "!pfr",
+    "body": ["{", "  type: 'row', // required", "  fields: [ // required", "    ${1}", "  ],", "},", "${2}"],
+    "description": "PayloadCMS Row - Field"
+  },
+  "PayloadCMS Select Field": {
+    "prefix": "!pfs",
+    "body": [
+      "{",
+      "  name: \"${1:fieldNname}\", // required",
+      "  type: \"select\", // required",
+      "  hasMany: ${2:false}, /// set to true if you want to select multiple",
+      "  options: [",
+      "    {",
+      "      label: \"${3:itemLabel}\",",
+      "      value: \"${4:itemValue}\",",
+      "    },",
+      "    {",
+      "      label: \"${5:itemLabel}\",",
+      "      value: \"${6:itemValue}\",",
+      "    },",
+      "  ],",
+      "  defaultValue:'${4:itemValue}',",
+      "  required: ${7:false},",
+      "},",
+      "${8}"
+    ],
+    "description": "PayloadCMS Select Field"
+  },
+  "PayloadCMS Text Field": {
+    "prefix": "!pft",
+    "body": [
+      "{",
+      "  name: \"${1:fieldNname}\", // required",
+      "  type: \"text\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  required: ${3:false},",
+      "},",
+      "${4}"
+    ],
+    "description": "PayloadCMS Text Field"
+  },
+  "PayloadCMS TextArea Field": {
+    "prefix": "!pfta",
+    "body": [
+      "{",
+      "  name: \"${1:fieldNname}\", // required",
+      "  type: \"textarea\", // required",
+      "  label: \"${2:fieldLabel}\",",
+      "  required: ${3:false},",
+      "},",
+      "${4}"
+    ],
+    "description": "PayloadCMS TextArea Field"
+  },
+  "PayloadCMS Upload Field": {
+    "prefix": "!pfu",
+    "body": [
+      "{",
+      "  name: \"${1:fieldNname}\", // required",
+      "  type: \"upload\", // required",
+      "  relationTo:'${2:collectionName}',  //required eg:media",
+      "  label: \"${3:fieldLabel}\",",
+      "  required: ${4:false},",
+      "},",
+      "${5}"
+    ],
+    "description": "PayloadCMS Upload Field"
+  },
+  "PayloadCMS Collection": {
+    "prefix": "!pc",
+    "body": [
+      "const ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/} = {",
+      "    slug: '${TM_FILENAME_BASE}s',",
+      "   labels: {",
+      "      singular: '${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}',",
+      "      plural: '${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}s',",
+      "    },",
+      "    fields: [",
+      "        //example text field",
+      "        {",
+      "            name: '${3:fieldName}',",
+      "            label: '${4:fieldLabel}',",
+      "            type: 'text',",
+      "        },",
+      "    ],",
+      "    admin: {",
+      "        useAsTitle: '${3:fieldName}',",
+      "    },",
+      "    timestamps: true,",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/};"
+    ],
+    "description": "PayloadCMS Collection"
+  },
+  "PayloadCMS Collection Upload": {
+    "prefix": "!pcu",
+    "body": [
+      "const ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/} = {",
+      "    slug: '${TM_FILENAME_BASE}s',",
+      "   labels: {",
+      "      singular: '${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}',",
+      "      plural: '${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}s',",
+      "    },",
+      "    fields: [",
+      "        //example text field",
+      "        {",
+      "            name: '${3:fieldName}',",
+      "            label: '${4:fieldLabel}',",
+      "            type: 'text',",
+      "        },",
+      "    ],",
+      "  upload: {",
+      "    staticURL: \"/${5:media}\",",
+      "    staticDir: \"${5:media}\",",
+      "    imageSizes: [",
+      "      {  //example size 1",
+      "        name: \"${6:thumbnail}\",",
+      "        width: ${7:300},",
+      "        height: ${8:300},",
+      "        crop: \"${9: centre}\",",
+      "      },",
+      "      { //example size 2",
+      "        name: \"${10:card}\",",
+      "        width: ${11:768},",
+      "        height: ${12:1024},",
+      "        crop: \"${13: centre}\",",
+      "      },",
+      "    ],",
+      "    adminThumbnail: \"${6:thumbnail}\",",
+      "    mimeTypes: [\"image/*\"],",
+      "  },",
+      "    admin: {",
+      "        useAsTitle: '${3:fieldName}',",
+      "    },",
+      "    timestamps: true,",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/};"
+    ],
+    "description": "PayloadCMS Collection Upload"
+  },
+  "PayloadCMS Block Field": {
+    "prefix": "!pfb",
+    "body": [
+      "{",
+      "  name: \"${1:fieldName}\", // required",
+      "  type: \"blocks\", // required",
+      "  minRows: ${2:1},",
+      "  maxRows: ${3:10},",
+      "  blocks: [",
+      "    // required",
+      "    {$4}",
+      "  ],",
+      "},",
+      "{$5}"
+    ],
+    "description": "PayloadCMS Block Field"
+  },
+  "PayloadCMS Block Field File": {
+    "prefix": "!pfbf",
+    "body": [
+      "const ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Block = {",
+      "    slug: '${TM_FILENAME_BASE}s', // required",
+      "   labels: {",
+      "      singular: '${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}',",
+      "      plural: '${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}s',",
+      "    },",
+      "    //imageURL: 'https://google.com/path/to/image.jpg',",
+      "    //imageAltText: 'A nice thumbnail image to show what this block looks like',",
+      "    fields: [ // required",
+      "        //example text field",
+      "        {",
+      "            name: '${3:fieldName}',",
+      "            label: '${4:fieldLabel}',",
+      "            type: 'text',",
+      "        },",
+      "    ],",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Block;"
+    ],
+    "description": "PayloadCMS Block Field File"
+  }
+}
