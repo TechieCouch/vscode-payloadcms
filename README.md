@@ -1,6 +1,6 @@
 # PayloadCMS
 
-## VS Code Reactjs snippets
+## VS Code PayloadCMS snippets
 
 ---
 
