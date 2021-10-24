@@ -2,8 +2,8 @@
 
 All notable changes to the "payloadcms-snippets" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Updated the badges
 
-## [Unreleased]
+## [Released]
 
 - Initial release
