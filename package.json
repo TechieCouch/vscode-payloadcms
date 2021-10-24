@@ -1,20 +1,30 @@
 {
-    "name": "payloadcms-snippets",
-    "displayName": "PayloadCMS Snippets",
-    "description": "This extension contains code snippets for PayloadCMS ",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.61.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "javascript",
-                "path": "./snippets/snippets.code-snippets"
-            }
-        ]
-    }
+  "name": "payloadcms-snippets",
+  "displayName": "PayloadCMS Snippets",
+  "description": "This extension contains code snippets for PayloadCMS ",
+  "version": "0.0.1",
+  "publisher": "TechieCouch",
+  "icon": "images/payloadcms.png",
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechieCouch/vscode-payloadcms"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
 }

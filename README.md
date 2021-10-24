@@ -8,7 +8,7 @@
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/xabikos.ReactSnippets.svg)](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
 [![Ratings](https://vsmarketplacebadge.apphb.com/rating/xabikos.ReactSnippets.svg)](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
 
-This extension contains code snippets for [PayloadCMS][payload] .
+This extension contains code snippets for [PayloadCMS][payload].
 
 ## Installation
 
@@ -51,4 +51,4 @@ Below is a list of all available snippets and the triggers of each one. The **â‡
 |   `!pfbfâ†’` | Create PayloadCMS Block Field File                            |
 
 [payload]: https://github.com/payloadcms/payload
-[javacript]: https://github.com/xabikos/vscode-javascript
+[javacript]: https://github.com/TechieCouch/vscode-payloadcms
