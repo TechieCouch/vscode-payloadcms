@@ -1,6 +1,4 @@
-# PayloadCMS
-
-## VS Code PayloadCMS snippets
+# VS Code PayloadCMS snippets
 
 ---
 
