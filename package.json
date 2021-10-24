@@ -2,9 +2,9 @@
   "name": "payloadcms-snippets",
   "displayName": "PayloadCMS Snippets",
   "description": "This extension contains code snippets for PayloadCMS ",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "TechieCouch",
-  "icon": "images/payloadcms.png",
+  "icon": "images/logo.jpg",
   "engines": {
     "vscode": "0.10.x"
   },
