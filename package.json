@@ -2,7 +2,7 @@
   "name": "payloadcms-snippets",
   "displayName": "PayloadCMS Snippets",
   "description": "This extension contains code snippets for PayloadCMS ",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "TechieCouch",
   "icon": "images/payloadcms.png",
   "engines": {
