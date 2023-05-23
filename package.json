@@ -6,7 +6,7 @@
   "publisher": "TechieCouch",
   "icon": "images/logo.jpg",
   "engines": {
-    "vscode": "0.10.x"
+    "vscode": "^0.74.0"
   },
   "categories": [
     "Snippets"
