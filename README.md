@@ -2,9 +2,9 @@
 
 ---
 
-[![Version](https://vsmarketplacebadge.apphb.com/version/TechieCouch.payloadcms-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=TechieCouch.payloadcms-snippets)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs/TechieCouch.payloadcms-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=TechieCouch.payloadcms-snippets)
-[![Ratings](https://vsmarketplacebadge.apphb.com/downloads/TechieCouch.payloadcms-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=TechieCouch.payloadcms-snippets)
+[![Version](https://vsmarketplacebadges.dev/version/TechieCouch.payloadcms-snippets.png)](https://marketplace.visualstudio.com/items?itemName=TechieCouch.payloadcms-snippets)
+[![Installs](https://vsmarketplacebadges.dev/installs/TechieCouch.payloadcms-snippets.png)](https://marketplace.visualstudio.com/items?itemName=TechieCouch.payloadcms-snippets)
+[![Ratings](https://vsmarketplacebadges.dev/downloads/TechieCouch.payloadcms-snippets.png)](https://marketplace.visualstudio.com/items?itemName=TechieCouch.payloadcms-snippets)
 
 This extension contains code snippets for [PayloadCMS][payload].
 
